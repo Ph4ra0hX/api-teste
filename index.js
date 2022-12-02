@@ -585,7 +585,7 @@ app.post("/enviar", function (req, res) {
   req.session.queijoebom += req.session.dadosCliente;
   console.log("3 " + req.session.precoSomado);
 
-  enderecoCompleto = `https://api.whatsapp.com/send?1=pt_BR&phone=5588993788451&text= +
+  let enderecoCompleto = `https://api.whatsapp.com/send?1=pt_BR&phone=5588993788451&text= +
     ${req.session.queijoebom} +
     \n\n *PREÇO TOTAL:* \n\n +
         • R$: +
