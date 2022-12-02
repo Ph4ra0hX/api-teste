@@ -638,6 +638,8 @@ app.post("/enviar", function (req, res) {
 
   req.session.destroy();
 
+  console.log(finalmente);
+
   res.redirect(finalmente);
 });
 
