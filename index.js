@@ -638,9 +638,7 @@ app.post("/enviar", function (req, res) {
 
   req.session.destroy();
 
-  console.log(finalmente);
-
-  res.redirect(finalmente);
+  res.json("oi");
 });
 
 app.listen(port || process.env.PORT, () => {
