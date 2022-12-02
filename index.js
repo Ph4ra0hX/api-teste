@@ -547,6 +547,8 @@ app.post("/finalizar", function (req, res) {
 });
 
 app.post("/enviar", function (req, res) {
+  res.json("oi");
+
   if (!req.session.dadosCliente) {
     req.session.dadosCliente = "";
   }
@@ -637,8 +639,6 @@ app.post("/enviar", function (req, res) {
   var finalmente = enderecoCompleto.replace("undefined", "");
 
   req.session.destroy();
-
-  res.json("oi");
 });
 
 app.listen(port || process.env.PORT, () => {
