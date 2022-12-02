@@ -40,11 +40,11 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.json("teste");
-  //if (!req.session.numeroDoPedidoCliente) {
-  //  req.session.numeroDoPedidoCliente = 1;
-  //}
-  //
+  //res.json("teste");
+  if (!req.session.numeroDoPedidoCliente) {
+    req.session.numeroDoPedidoCliente = 1;
+  }
+
   //res.render("index.html", {
   //  numeroDoPedidoCliente: "1",
   //});
