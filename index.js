@@ -584,7 +584,7 @@ app.post("/enviar", function (req, res) {
 
   req.session.queijoebom += req.session.dadosCliente;
   console.log("3 " + req.session.precoSomado);
-
+  /*
   enderecoCompleto =
     "https://api.whatsapp.com/send?1=pt_BR&phone=5588993788451&text=" +
     req.session.queijoebom +
@@ -619,7 +619,7 @@ app.post("/enviar", function (req, res) {
     enderecoCompleto +=
       "\n\n    • Taxa de entrega inclusa no valor total. \n\n";
   }
-
+  
   req.session.numeroDoPedido = 0;
 
   req.session.dadosCliente = "";
@@ -636,10 +636,11 @@ app.post("/enviar", function (req, res) {
 
   var finalmente = enderecoCompleto.replace("undefined", "");
 
-  //req.session.destroy();
-  //
-  //res.redirect(finalmente);
-  //next();
+  req.session.destroy();
+  
+  res.redirect(finalmente);
+  next();
+*/
 });
 
 app.listen(port || process.env.PORT, () => {
