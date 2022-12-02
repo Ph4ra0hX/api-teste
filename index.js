@@ -636,10 +636,10 @@ app.post("/enviar", function (req, res) {
 
   var finalmente = enderecoCompleto.replace("undefined", "");
 
-  req.session.destroy();
-
-  res.redirect(finalmente);
-  next();
+  //req.session.destroy();
+  //
+  //res.redirect(finalmente);
+  //next();
 });
 
 app.listen(port || process.env.PORT, () => {
