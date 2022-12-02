@@ -546,7 +546,7 @@ app.post("/finalizar", function (req, res) {
   console.log(req.session.queijoebom);
 });
 
-app.get("/enviar", function (req, res) {
+app.post("/enviar", function (req, res) {
   if (!req.session.dadosCliente) {
     req.session.dadosCliente = "";
   }
